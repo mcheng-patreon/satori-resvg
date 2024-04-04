@@ -18,7 +18,7 @@ for (let i = 0; i < 1000; i++) {
         <p>Frame: {i}</p>
         <div style={{
         display: "flex",
-        left: `${Math.floor(i % 600)}px`,
+        left: `${Math.floor(i % 1000)}px`,
       }}>
         <img src={`https://github.com/mcheng-patreon/satori-resvg/blob/main/running/frame_${frame_idx}_delay-0.0${delayed_frames.includes(parseInt(frame_idx)) ? "5" : "4"}s.gif?raw=true`} ></img>
         </div>
