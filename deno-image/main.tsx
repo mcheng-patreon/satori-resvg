@@ -11,7 +11,7 @@ const yoga =
   await (initYoga as unknown as (wasm: Uint8Array) => Promise<unknown>)(wasm);
 init(yoga);
 
-function FormatNumberLength(num, length) {
+export function FormatNumberLength(num, length) {
   var r = "" + num;
   while (r.length < length) {
       r = "0" + r;
@@ -45,7 +45,8 @@ export async function createImage(template: any, frame: number) {
   const pngBuffer = pngData.asPng();
 
   await Deno.writeFile(`frame${FormatNumberLength(frame, 5)}.png`, pngBuffer);
-  
+
   // ffi block, need to force exit
   Deno.exit(0);
+
 }
