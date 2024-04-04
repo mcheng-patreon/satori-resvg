@@ -1,7 +1,7 @@
 import React from "https://esm.sh/react@18.2.0";
 import { createImage } from "./main.tsx";
 
-for (let i = 0; i < 100; i++) {
+for (let i = 0; i < 1000; i++) {
   var template = (
     <div
     style={{
